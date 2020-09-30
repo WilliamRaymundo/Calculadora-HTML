@@ -78,6 +78,7 @@ $('#soma').click(function(){
   	}		
 
 
+
 });
 
 
@@ -136,9 +137,8 @@ $('#subt').click(function(){
   	document.form.visor.value = "-";
   	}	
   	/*caso esteje multiplicando e quer colcoar um valor negativo*/
-  	if(document.form.visor.value.substring(1,-2) == "*" && document.form.visor.value.substring(1) == ""){
+  	if((document.form.visor.value.substring(1,-2) == "*" || document.form.visor.value.substring(1,-2) == "/") && document.form.visor.value.substring(1) == ""){
   		document.form.visor.value += "-";
-
   	}
 
 
@@ -189,6 +189,13 @@ $('#multi').click(function(){
   				document.form.visor.value = " ";
   				document.form.visor.value = "*";
   		}
+      /*caso ele tenha começado uma divisão*/
+        if(document.form.visor.value.substring(1,-2) == "/" && document.form.visor.value.substring(1) >0){
+          count = count / parseFloat(document.form.visor.value.substring(1));
+          historico.innerHTML += ""+document.form.visor.value;
+          document.form.visor.value = " ";
+          document.form.visor.value = "*";
+        }
   
   	}
   	/*if(document.form.visor.value.substring(1,-2) == "-"){*/
@@ -242,6 +249,13 @@ $('#divi').click(function(){
   				document.form.visor.value = " ";
   				document.form.visor.value = "/";
   		}
+      /*caso ele tenha começado uma multiplicação*/
+        if(document.form.visor.value.substring(1,-2) == "*" && document.form.visor.value.substring(1) >0){
+          count = count * parseFloat(document.form.visor.value.substring(1));
+          historico.innerHTML += ""+document.form.visor.value;
+          document.form.visor.value = " ";
+          document.form.visor.value = "/";
+        }
   
   	}
   	/*if(document.form.visor.value.substring(1,-2) == "-"){*/
@@ -251,6 +265,44 @@ $('#divi').click(function(){
   	}*/
 }
 });
+
+$('#raiz').click(function(){
+  /*caso a pessoa já esteja fazendo um calculo*/
+  if((document.form.visor.value.substring(1,-2) == "+" || document.form.visor.value.substring(1,-2) == "*" || document.form.visor.value.substring(1,-2) == "/") && document.form.visor.value.substring(1) >0 ){
+  var raiz = Math.sqrt(document.form.visor.value.substring(1));
+  aredond = raiz.toFixed(4);
+  document.form.visor.value = document.form.visor.value.substring(1,-2) + aredond;
+
+
+  }
+
+  /*caso tente a raiz de um numero negativo*/
+   if(document.form.visor.value.substring(1,-2) == "-" || document.form.visor.value.substring(2,-3) == "*-" || document.form.visor.value.substring(2,-3) == "/-") {
+  document.form.visor.value = "Erro de entrada";
+  }
+
+  if((document.form.visor.value.substring(1,-2) != "-" || document.form.visor.value.substring(1,-2) != "+" || document.form.visor.value.substring(1,-2) != "/" || document.form.visor.value.substring(1,-2) != "*") && document.form.visor.value.substring(0) > 0 ){
+  var raiz = Math.sqrt(document.form.visor.value.substring(0));
+  aredond = raiz.toFixed(4);
+  document.form.visor.value = aredond;
+
+  }
+  
+
+});
+
+$('#verificar').click(function(){
+  if(document.form.visor.value == "Erro de entrada"){
+    document.form.visor.value = "";
+    historico.innerHTML = "";
+    var count = 0;//recebendo o valor 5 que você disse
+    var uso = 0;
+  }
+  
+
+});
+
+
 
 $('#result').click(function(){
 	uso = 1;
