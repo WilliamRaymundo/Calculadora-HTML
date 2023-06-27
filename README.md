@@ -13,11 +13,11 @@ Este é o código-fonte de uma calculadora simples em HTML. A calculadora permit
 
 A calculadora utiliza as seguintes tecnologias:
 
-- HTML5 🌐: Linguagem de marcação para estruturar a página.
-- CSS 🎨: Folhas de estilo para estilizar a calculadora.
-- JavaScript 🖥️: Scripts para adicionar funcionalidades interativas à calculadora.
-- [jQuery](https://jquery.com/) 🤖: Biblioteca JavaScript para facilitar a manipulação do DOM e realizar animações.
-- [Particles.js](https://vincentgarreau.com/particles.js/) ✨: Biblioteca JavaScript para criar efeitos de partículas animadas no fundo da página.
+- HTML5 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white&labelColor=%23E34F26)
+- CSS ![CSS](https://img.shields.io/badge/CSS-%231572B6?style=flat&logo=css3&logoColor=white&labelColor=%231572B6)
+- JavaScript ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black&labelColor=%23F7DF1E)
+- [jQuery](https://jquery.com/) ![jQuery](https://img.shields.io/badge/jQuery-%230769AD?style=flat&logo=jquery&logoColor=white&labelColor=%230769AD)
+- [Particles.js](https://vincentgarreau.com/particles.js/) ![Particles.js](https://img.shields.io/badge/Particles.js-%2338AECC?style=flat&logo=javascript&logoColor=white&labelColor=%2338AECC)
 
 ## Estrutura do projeto 📁
 
@@ -37,3 +37,4 @@ Esta calculadora foi desenvolvida por William R. Raymundo.
 ## Licença 📄
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
+
