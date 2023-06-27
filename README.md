@@ -2,8 +2,6 @@
 
 Este é o código-fonte de uma calculadora simples em HTML. A calculadora permite realizar operações básicas de adição, subtração, multiplicação, divisão e raiz quadrada.
 
-![Calculadora](calculator.png)
-
 ## Como usar 🚀
 
 1. Abra o arquivo `index.html` em qualquer navegador da web.
